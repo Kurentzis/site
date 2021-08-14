@@ -1,0 +1,77 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title> Vault-Tec Volume converter </title>
+<!--This is CSS section-->
+<style>
+   body { background: url(https://im0-tub-ru.yandex.net/i?id=ecd6f494475beeb2b55e33be466b3e86-l&ref=rim&n=13&w=1601&h=942);
+    background-color: blue;
+    background-attachment: fixed;
+    background-repeat: repeat-x;
+    background-size: 100%;
+    width: 40%;
+     }
+h1 {
+    color: gold;
+    text-align: center;
+    font-size: 60px;
+}
+img {
+    width: 100px;
+    height: 100px;
+}
+p {
+    color: gold;
+    font-size: 30px;
+}
+div {
+    color: gold;
+}
+table {
+    border: 5px solid gold;
+    color: gold;
+    width: 20%;
+    height: auto;
+    font-size: 20px;
+}
+tr, th, td {
+    border: 1px solid gold;
+}
+</style>
+<!-- This is JS section-->
+<script>
+    function quartToLitr() {
+        //To get an input from a user and convert it to a number
+        let quart = parseFloat(document.getElementById('quarts').value);
+        //Now convert the input into litrs
+        let litrs = quart*0.946353 + ' litrs';
+        //And display the output
+        document.getElementById('outputDiv').innerHTML=litrs;
+        let thanks = "Thank you!"
+        document.getElementById('ThU').innerHTML=thanks;
+    }
+</script>
+</head>
+<body>
+    <h1>Welcom to Vault Tec volume converter!</h1>
+    <p>new change</p>
+    <img class=icon src="https://www.pngjoy.com/pngm/772/9192698_pipboy-fallout-bottle-and-cappy-hd-png-download.png" alt="Error">
+    <p>Quarts to litrs:</p>
+    <input type="text" id="quarts" size="3">
+    <button type="button" onclick="quartToLitr()">Convert</button>
+    <div id="outputDiv"></div>
+    <div id='ThU'></div>
+    <p>You are probably curious how does it work? Then look!:</p>
+    <!--This is a defening table-->
+    <table> 
+        <caption><b>Defining table</b></caption>
+        <tr>
+            <th>Input</th><th>Processing</th><th>Output</th>
+        </tr>
+        <tr>
+            <td>Quarts</td><td>Quarts*0.946353</td><td>Volume in litrs</td>
+        </tr>
+    </table>
+</body>
+</html>
